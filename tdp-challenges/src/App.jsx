@@ -1,9 +1,10 @@
-import Challenge1 from './Challenge1/App';
+// import Challenge1 from './Challenge1/App';
+import Challenge2UE from './Challenge2UE/App';
 
 function App() {
   return (
     <div>
-      <Challenge1/>
+      <Challenge2UE/>
     </div>
   );
 }
