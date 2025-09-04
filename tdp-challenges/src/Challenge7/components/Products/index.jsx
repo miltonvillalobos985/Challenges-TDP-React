@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Product from "../Product"
+import Product from "../Product";
 
 const Products = () => {
   const [products, setProducts] = useState([]);
@@ -12,13 +12,13 @@ const Products = () => {
   }, []);
 
   return (
-      <ul>
-        {products.map((item) => (
-          <li key={item.id}>
-            <Product product={item} />
-          </li>
-        ))}
-      </ul>
+    <ul>
+      {products.map((item) => (
+        <li key={item.id}>
+          <Product product={item} />
+        </li>
+      ))}
+    </ul>
   );
 };
 

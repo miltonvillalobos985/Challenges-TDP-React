@@ -10,8 +10,3 @@ export const removeFromCart = (item) => ({
   type: REMOVE_FROM_CART,
   payload: item,
 });
-
-
-export const LOGIN_USER = "LOGIN_USER";
-export const LOGOUT_USER = "LOGOUT_USER";
-

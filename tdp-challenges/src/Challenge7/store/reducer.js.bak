@@ -1,4 +1,4 @@
-import {ADD_TO_CART, REMOVE_FROM_CART,LOGIN_USER,LOGOUT_USER} from './action'
+import {ADD_TO_CART, REMOVE_FROM_CART,LOGIN_USER,LOGOUT_USER} from './actions.js.bak'
 
 const initialValues = {
     cart: [],
@@ -18,9 +18,15 @@ export const reducer = (state=initialValues, action) => {
         cart: newCart
       };
     case LOGIN_USER:
-      return state;
+      return {
+        ...state,
+        user: action.payload
+      };
     case LOGOUT_USER:
-      return state;
+      return {
+        ...state,
+        user: null
+      };
     default:
       return state;
   }

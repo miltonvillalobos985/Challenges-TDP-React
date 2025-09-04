@@ -1,10 +1,16 @@
 import LoginForm from "../LoginForm";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../store/user/actions";
 
 const Login = () => {
-  if (false) {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
+
+  if (user) {
     return (
       <div>
-        Hello User <button onClick={() => {}}>Login</button>
+        Hello {user.name.firstname}{" "}
+        <button onClick={() => dispatch(logoutUser())}>Logout</button>
       </div>
     );
   }
